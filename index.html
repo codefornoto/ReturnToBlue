@@ -80,17 +80,18 @@
         #modal-slider-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 16 / 9;
-            max-height: 70vh;
+            aspect-ratio: 4 / 3;
+            max-height: 65vh;
             overflow: hidden;
             border-radius: 12px;
             cursor: ew-resize;
             background: #000;
         }
 
-        @media (min-width: 768px) {
+        @media (min-width: 1024px) {
             #modal-slider-container {
-                aspect-ratio: 16 / 7;
+                aspect-ratio: 3 / 2;
+                max-height: 70vh;
             }
         }
 
