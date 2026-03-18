@@ -80,8 +80,8 @@
         #modal-slider-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 4 / 3;
-            max-height: 65vh;
+            aspect-ratio: 4 / 5;
+            max-height: 85vh;
             overflow: hidden;
             border-radius: 12px;
             cursor: ew-resize;
@@ -90,8 +90,8 @@
 
         @media (min-width: 1024px) {
             #modal-slider-container {
-                aspect-ratio: 3 / 2;
-                max-height: 70vh;
+                aspect-ratio: 1 / 1;
+                max-height: 90vh;
             }
         }
 
@@ -118,7 +118,7 @@
             max-width: 90%;
             max-height: 90%;
             object-fit: contain;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
         }
 
         .close-lightbox {
@@ -149,12 +149,12 @@
             overflow: hidden;
             border-radius: 4px;
             cursor: pointer;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             transition: border-color 0.3s, transform 0.3s;
         }
 
         .album-item:hover {
-            border-color: rgba(255,255,255,0.5);
+            border-color: rgba(255, 255, 255, 0.5);
             transform: scale(1.05);
         }
 
@@ -172,17 +172,18 @@
        STATIC HERO SECTION
   =========================================== -->
     <section id="hero-section" class="relative w-full overflow-hidden select-none">
-        
+
         <!-- Background Image -->
-        <img src="data/hero/hero.jpg" alt="Shika-machi Beach" 
-             class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] hover:scale-105">
+        <img src="data/hero/hero.jpg" alt="Shika-machi Beach"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] hover:scale-105">
         <div class="absolute inset-0 bg-black/40"></div>
 
         <!-- Typography -->
         <div class="relative z-10 text-center text-glow animate-reveal p-6">
-            <h1 class="text-3xl md:text-6xl font-light tracking-[0.5em] md:tracking-[0.8em] uppercase mb-6">Return to Blue</h1>
+            <h1 class="text-3xl md:text-6xl font-light tracking-[0.5em] md:tracking-[0.8em] uppercase mb-6">Return to
+                Blue</h1>
             <p class="text-xs md:text-sm tracking-[0.4em] opacity-70 uppercase font-light mb-12">志賀町 海岸清掃プロジェクト</p>
-            
+
             <div class="mt-20 flex flex-col items-center opacity-40 animate-bounce">
                 <span class="text-[8px] tracking-[0.3em] uppercase mb-4">Scroll to Explore</span>
                 <div class="w-[1px] h-12 bg-white/50"></div>
@@ -273,7 +274,7 @@
                 <div
                     class="w-full md:w-[45%] pl-12 md:pl-0 md:text-right md:pr-16 mb-8 md:mb-0 transition-transform duration-700 group-hover:-translate-x-2">
                     <p class="text-[10px] tracking-[0.4em] text-white/40 mb-3 font-light">2026.03.14</p>
-                    <h3 class="text-lg md:text-xl font-light tracking-[0.2em] mb-4 cursor-pointer" 
+                    <h3 class="text-lg md:text-xl font-light tracking-[0.2em] mb-4 cursor-pointer"
                         onclick="openDetailModal('志賀町海岸清掃', '2026.03.14', '志賀町の海岸にて、地元ボランティアとともに漂着したプラスチック片や大型の漁具を回収。本来の美しい砂浜の姿が少しずつ見えてきました。', 'data/images/20260314/BeforeAfter/Before.jpg', 'data/images/20260314/BeforeAfter/After.jpg', ['data/images/20260314/image.jpg', 'data/images/20260314/image_2.jpg'])">
                         志賀町海岸清掃
                     </h3>
@@ -284,8 +285,7 @@
                 </div>
 
                 <!-- 画像 (右側) -->
-                <div
-                    class="w-full md:w-[45%] pl-12 md:pl-0 transition-transform duration-700 group-hover:translate-x-2 cursor-pointer"
+                <div class="w-full md:w-[45%] pl-12 md:pl-0 transition-transform duration-700 group-hover:translate-x-2 cursor-pointer"
                     onclick="openDetailModal('志賀町海岸清掃', '2026.03.14', '志賀町の海岸にて、地元ボランティアとともに漂着したプラスチック片や大型の漁具を回収。本来の美しい砂浜の姿が少しずつ見えてきました。', 'data/images/20260314/BeforeAfter/Before.jpg', 'data/images/20260314/BeforeAfter/After.jpg', ['data/images/20260314/image.jpg', 'data/images/20260314/image_2.jpg'])">
                     <div
                         class="overflow-hidden rounded-md aspect-[4/3] relative border border-white/10 group-hover:border-white/20 transition-colors">
@@ -293,7 +293,9 @@
                             class="w-full h-full object-cover grayscale-[60%] transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105">
                         <div
                             class="absolute inset-0 bg-black/30 group-hover:bg-transparent transition-colors duration-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                            <span class="text-[10px] tracking-[0.2em] uppercase text-white bg-black/40 px-3 py-2 backdrop-blur-sm">View Details</span>
+                            <span
+                                class="text-[10px] tracking-[0.2em] uppercase text-white bg-black/40 px-3 py-2 backdrop-blur-sm">View
+                                Details</span>
                         </div>
                     </div>
                 </div>
@@ -307,48 +309,68 @@
   =========================================== -->
     <div id="detail-modal"
         class="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-start justify-center opacity-0 pointer-events-none transition-all duration-500 overflow-y-auto p-4 md:p-10">
-        <div class="max-w-6xl w-full bg-[#080808] border border-white/10 rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 scale-95 my-auto" id="detail-modal-content">
-            
+        <div class="max-w-6xl w-full bg-[#080808] border border-white/10 rounded-2xl overflow-hidden shadow-2xl transition-transform duration-500 scale-95 my-auto"
+            id="detail-modal-content">
+
             <div class="flex flex-col">
                 <!-- Top Section: Header & Slider -->
                 <div class="p-6 md:p-10 border-b border-white/5">
                     <div class="flex justify-between items-center mb-8">
                         <div>
-                            <h2 id="modal-title" class="text-xl md:text-2xl font-light tracking-[0.3em] uppercase">Activity Details</h2>
-                            <p id="modal-date" class="text-[10px] tracking-[0.4em] text-white/30 uppercase mt-2">2026.03.14</p>
+                            <h2 id="modal-title" class="text-xl md:text-2xl font-light tracking-[0.3em] uppercase">
+                                Activity Details</h2>
+                            <p id="modal-date" class="text-[10px] tracking-[0.4em] text-white/30 uppercase mt-2">
+                                2026.03.14</p>
                         </div>
-                        <button onclick="closeDetailModal()" class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/40 hover:text-white transition-all">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                        <button onclick="closeDetailModal()"
+                            class="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-white/10 text-white/40 hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
                         </button>
                     </div>
 
                     <!-- Before/After Slider (Hero Size) -->
                     <div id="modal-slider-container" class="mb-10 group shadow-2xl">
                         <!-- AFTER -->
-                        <img id="modal-after-img" src="" alt="After" class="absolute inset-0 w-full h-full object-cover">
+                        <img id="modal-after-img" src="" alt="After"
+                            class="absolute inset-0 w-full h-full object-cover">
                         <!-- BEFORE -->
-                        <div id="modal-before-layer" class="absolute inset-0 w-full h-full overflow-hidden" style="clip-path: inset(0 50% 0 0)">
-                            <img id="modal-before-img" src="" alt="Before" class="absolute inset-0 w-full h-full object-cover">
+                        <div id="modal-before-layer" class="absolute inset-0 w-full h-full overflow-hidden"
+                            style="clip-path: inset(0 50% 0 0)">
+                            <img id="modal-before-img" src="" alt="Before"
+                                class="absolute inset-0 w-full h-full object-cover">
                         </div>
                         <!-- UI Overlays for Slider -->
                         <div class="absolute top-4 left-4 z-20 pointer-events-none">
-                            <span class="text-[8px] tracking-[0.2em] uppercase bg-black/40 backdrop-blur-md px-2 py-1 border border-white/10 text-white/60">Before</span>
+                            <span
+                                class="text-[8px] tracking-[0.2em] uppercase bg-black/40 backdrop-blur-md px-2 py-1 border border-white/10 text-white/60">Before</span>
                         </div>
                         <div class="absolute top-4 right-4 z-20 pointer-events-none text-right">
-                            <span class="text-[8px] tracking-[0.2em] uppercase bg-black/40 backdrop-blur-md px-2 py-1 border border-white/10 text-white/60">After</span>
+                            <span
+                                class="text-[8px] tracking-[0.2em] uppercase bg-black/40 backdrop-blur-md px-2 py-1 border border-white/10 text-white/60">After</span>
                         </div>
 
                         <!-- Handle -->
-                        <div id="modal-slider-handle" class="absolute top-0 bottom-0 z-20 flex flex-col items-center pointer-events-none" style="left: 50%; transform: translateX(-50%)">
+                        <div id="modal-slider-handle"
+                            class="absolute top-0 bottom-0 z-20 flex flex-col items-center pointer-events-none"
+                            style="left: 50%; transform: translateX(-50%)">
                             <div class="w-[1px] h-full bg-white/40 shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
-                            <div class="absolute top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/40 backdrop-blur-md bg-white/5 flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
-                                <div class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]"></div>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 w-12 h-12 rounded-full border border-white/40 backdrop-blur-md bg-white/5 flex items-center justify-center shadow-2xl transition-transform group-hover:scale-110">
+                                <div class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="max-w-3xl">
-                        <p id="modal-description" class="text-xs md:text-sm text-white/60 leading-relaxed md:leading-loose tracking-[0.1em] text-justify"></p>
+                        <p id="modal-description"
+                            class="text-xs md:text-sm text-white/60 leading-relaxed md:leading-loose tracking-[0.1em] text-justify">
+                        </p>
                     </div>
                 </div>
 
@@ -379,7 +401,12 @@
   =========================================== -->
     <button id="open-upload"
         class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-white/40 hover:text-white transition-all duration-300 hover:scale-110 shadow-xl">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+            <polyline points="17 8 12 3 7 8" />
+            <line x1="12" y1="3" x2="12" y2="15" />
+        </svg>
     </button>
     <div id="upload-modal"
         class="no-drag fixed inset-0 z-50 bg-black/80 backdrop-blur-xl flex items-center justify-center opacity-0 pointer-events-none transition-all duration-700">
